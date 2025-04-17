@@ -1,3 +1,4 @@
+// Subclass: BallSports
 public class BallSports extends Sports {
     private String ballType;
     private boolean isTeamSport;
@@ -8,7 +9,7 @@ public class BallSports extends Sports {
         this.isTeamSport = isTeamSport;
         
     }
-
+    // Polymorphism: Override rules
     @Override
     public void displayRules() {
         System.out.println("Rule: " + ballType + " ball. Team sport? " + isTeamSport);
