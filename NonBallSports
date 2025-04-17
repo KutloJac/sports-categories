@@ -1,0 +1,15 @@
+public class NonBallSports extends Sports {
+    private String equipment;
+    private String venueType;
+
+    public BallSports(String name, int playerCount, boolean isPopularInBotswana, String equipment, boolean venueType) {
+        super(name, playerCount, is isPopularInBotswana) 
+        this.equipment = equipment;
+        this.venueType = venueType; 
+    }
+
+    @Override
+    public void displayRules() {
+        System.out.println("Rule: " + equipment + " ball. Venue: " + venueType);
+    }
+}

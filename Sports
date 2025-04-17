@@ -1,0 +1,33 @@
+abstract class Sports{
+    private String name;
+    private int playerCount;
+    private boolean isPopularInBotswana;
+
+    public Sports(String name, int playerCount, boolean isPopularInBotswana) {
+        this.name = name;
+        this.playerCount = playerCount;
+        this.isPopularInBotswana = isPopularInBotswana;
+
+    }
+    public String getName(){
+        return Name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public int getplayerCount(){
+        return playerCount;
+    }
+    public void setplayerCount(int playerCount){
+        if (playerCount > 0){
+            this.playerCount = playerCount;}
+    }
+    public boolean getisPopularInBotswana(){
+        return isPopularInBotswana;
+    }
+    public void setisPopularInBotswana(boolean isPopularInBotswana){
+        this.isPopularInBotswana = isPopularInBotswana;
+    }
+
+    public abstract void displayRules();
+}

@@ -1,0 +1,16 @@
+public class BallSports extends Sports {
+    private String ballType;
+    private boolean isTeamSport;
+
+    public BallSports(String name, int playerCount, boolean isPopularInBotswana, String ballType, boolean isTeamSport) {
+        super(name, playerCount, is isPopularInBotswana) 
+        this.ballType = ballType;
+        this.isTeamSport = isTeamSport;
+        
+    }
+
+    @Override
+    public void displayRules() {
+        System.out.println("Rule: " + ballType + " ball. Team sport? " + isTeamSport);
+    }
+}
