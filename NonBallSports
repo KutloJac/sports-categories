@@ -1,3 +1,4 @@
+//Subclass: NonBallSports
 public class NonBallSports extends Sports {
     private String equipment;
     private String venueType;
@@ -7,7 +8,7 @@ public class NonBallSports extends Sports {
         this.equipment = equipment;
         this.venueType = venueType; 
     }
-
+    //Polymorphism: Override rules
     @Override
     public void displayRules() {
         System.out.println("Rule: " + equipment + " ball. Venue: " + venueType);
