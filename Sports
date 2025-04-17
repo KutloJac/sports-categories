@@ -1,3 +1,4 @@
+// Parent class Sports(Abstract)
 abstract class Sports{
     private String name;
     private int playerCount;
@@ -7,8 +8,9 @@ abstract class Sports{
         this.name = name;
         this.playerCount = playerCount;
         this.isPopularInBotswana = isPopularInBotswana;
-
-    }
+    
+    } 
+    // basic getters and setters
     public String getName(){
         return Name;
     }
@@ -28,6 +30,6 @@ abstract class Sports{
     public void setisPopularInBotswana(boolean isPopularInBotswana){
         this.isPopularInBotswana = isPopularInBotswana;
     }
-
+    // Abstract method polymorphism
     public abstract void displayRules();
 }
