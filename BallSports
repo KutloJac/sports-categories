@@ -13,6 +13,6 @@ public class BallSports extends Sports {
     // Polymorphism: Override rules
     @Override
     public void displayRules() {
-        System.out.println("Rule: " + ballType + " ball. Team sport? " + isTeamSport);
+        System.out.println("Rule: " + ballType + ". Team sport? " + isTeamSport);
     }
 }
