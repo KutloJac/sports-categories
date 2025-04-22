@@ -17,7 +17,7 @@ abstract class Sports{
     public void setName(String name){
         this.name = name;
     }
-    public int getplayerCount(){
+    public int getPlayerCount(){
         return playerCount;
     }
     public void setplayerCount(int playerCount){
@@ -27,9 +27,7 @@ abstract class Sports{
     public boolean getisPopularInBotswana(){
         return isPopularInBotswana;
     }
-    public void setisPopularInBotswana(boolean isPopularInBotswana){
-        this.isPopularInBotswana = isPopularInBotswana;
-    }
-    // Abstract method polymorphism
+
+    // Abstract method for polymorphism
     public abstract void displayRules();
 }

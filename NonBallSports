@@ -8,6 +8,7 @@ public class NonBallSports extends Sports {
         this.equipment = equipment;
         this.venueType = venueType; 
     }
+    
     //Polymorphism: Override rules
     @Override
     public void displayRules() {

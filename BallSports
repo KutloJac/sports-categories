@@ -4,11 +4,12 @@ public class BallSports extends Sports {
     private boolean isTeamSport;
 
     public BallSports(String name, int playerCount, boolean isPopularInBotswana, String ballType, boolean isTeamSport) {
-        super(name, playerCount, is isPopularInBotswana) 
+        super(name, playerCount, isPopularInBotswana) 
         this.ballType = ballType;
         this.isTeamSport = isTeamSport;
         
     }
+    
     // Polymorphism: Override rules
     @Override
     public void displayRules() {
