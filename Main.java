@@ -7,7 +7,7 @@ public class Main{
                 // Creating an instance of NonBallSports
                 NonBallSports cricket = new NonBallSports("Cricket", 6, true, "Helmet", "Stadium");
                 
-                // Using Polymorphism: Same method call, but behavior depends on the type of object
+                // Using Polymorphism: 
                 System.out.println(football); // Display BallSports info
                 football.displayRules(); 
                 
