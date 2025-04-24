@@ -22,7 +22,9 @@ abstract class Sports{
     }
     public void setplayerCount(int playerCount){
         if (playerCount > 0){
-            this.playerCount = playerCount;}
+            throw new InvalidPlayerCount("Invalid players: " + count + " for " + name);
+            }
+            this.playerCount = playerCount;
     }
     public boolean getisPopularInBotswana(){
         return isPopularInBotswana;

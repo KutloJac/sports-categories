@@ -1,0 +1,5 @@
+public class InvalidPlayerCount extends Exception{
+    public InvalidPlayerCountException(String message){
+        super(message);
+    }
+}
