@@ -28,5 +28,48 @@ public class SportsUtiltySorter {
         list.set(j + 1, key);
     }
 
+    public static int linearSearchByEquipment(ArrayList<Sports> list, String equipment){
+        for(int i = 0; i < list.size(); i++) {
+            if (list.get(i) instanceof NonBallSports){
+                NonBallSports sport = (NonBallSports) list.get(i);
+                if (sports.getEquipment().equalsIgnoreCase(equipment)){
+                    return i;
+                }
+            }
+        }
+        return -1
+    }
+
+    public static int binarySearchByPlayers(ArrayList<Sports> list, int targetPlayers) {
+        throws  UnsortedListException, SportNotFoundException {
+
+            if(!isSortedByPlayers(list)) {
+                throw new UnsortedListException("List must be sorted for binary search!");
+            }
+        
+        int left = 0;
+        int right = list.size() - 1;
+        while(left <= right) {
+            int mid = left + (right - left)/2;
+            int currentPlayers = list.get(mid).getPlayerCount();
+            if(currentPlayers == targetPlayers){
+                return mid;
+            } else if(currentPlayers < targetPlayers) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+            if(result == -1) throw new SportNotFoundException("No sport with " + target + " players ");
+            return result;
+        }
+    }
+     public static boolean isSortedByPlayers(ArrayList<Sports> list) {
+        for (int i = 0; i < list.size()-1; i++){
+            if (list.get(i).getPlayerCount()> list.get(i+1).getPlayerCount())
+            return false;
+        }
+        return true;
+     }
+    }
 
 }
