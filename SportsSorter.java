@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class SportsSorter {
-    public static void selectionSortByPlayers(ArrayList<Sportss> list) {
+    public static void selectionSortByPlayers(ArrayList<Sports> list) {
         for (int i = 0; i < list.size(); i++) {
             int minIndex = i;
 
@@ -11,13 +11,13 @@ public class SportsSorter {
                 }
             }
 
-            Sportss temp = list.get(i);
+            Sports temp = list.get(i);
             list.set(i, list.get(minIndex));
             list.set(minIndex, temp);
         }
     }
 
-    public static int binarySearchByPlayers(ArrayList<Sportss> list, int targetPlayers) throws UnsortedListException, SportNotFoundException {
+    public static int binarySearchByPlayers(ArrayList<Sports> list, int targetPlayers) throws UnsortedListException, SportNotFoundException {
         if(!isSortedByPlayers(list)) throw new UnsortedListException("List must be sorted for binary search!");
 
         int left = 0;
@@ -39,7 +39,7 @@ public class SportsSorter {
         throw new SportNotFoundException("No sport with " + targetPlayers + " players");
     }
 
-    public static boolean isSortedByPlayers(ArrayList<Sportss> list) {
+    public static boolean isSortedByPlayers(ArrayList<Sports> list) {
         for (int i = 0; i < list.size()-1; i++) {
             if (list.get(i).getPlayerCount() > list.get(i+1).getPlayerCount())
                 return false;
@@ -47,7 +47,7 @@ public class SportsSorter {
         return true;
     }
 
-    public static int linearSearchByEquipment(ArrayList<Sportss> list, String equipment) {
+    public static int linearSearchByEquipment(ArrayList<Sports> list, String equipment) {
         for(int i = 0; i < list.size(); i++) {
             if (list.get(i) instanceof NonBallSports) {
                 NonBallSports sport = (NonBallSports) list.get(i);
@@ -59,9 +59,9 @@ public class SportsSorter {
         return -1;
     }
 
-    public static void insertionSortByName(ArrayList<Sportss> list) {
+    public static void insertionSortByName(ArrayList<Sports> list) {
         for (int i = 1; i < list.size(); i++) {
-            Sportss key = list.get(i);
+            Sports key = list.get(i);
             int j = i - 1;
             
             while (j >= 0 && list.get(j).getName().compareToIgnoreCase(key.getName()) > 0) {
@@ -72,4 +72,14 @@ public class SportsSorter {
             list.set(j + 1, key);
         }
     }
-}
+    
+    
+    public static int linearSearchByName(ArrayList<Sports> list, String name) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getName().equalsIgnoreCase(name)) {
+                return i;
+            }
+        }
+        return -1;
+        }
+    }
