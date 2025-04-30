@@ -1,4 +1,4 @@
-public class NonBallSports extends Sportss {
+public class NonBallSports extends Sports {
     private String equipment;
     private String venueType;
 
@@ -11,14 +11,28 @@ public class NonBallSports extends Sportss {
     public String getEquipment() {
         return equipment;
     }
+    
+    public void setEquipment(String equipment) {
+        this.equipment = equipment;
+    }
 
-    public String getVenueType() {  // Fixed method name for consistency
+    public String getVenueType() {
         return venueType;
+    }
+    
+    public void setVenueType(String venueType) {
+        this.venueType = venueType;
     }
     
     //Polymorphism: Override rules
     @Override
     public void displayRules() {
-        System.out.println("Rule: Use " + equipment + ". Venue: " + venueType);  // Fixed message
+        System.out.println("Rule: Use " + equipment + ". Venue: " + venueType);
+    }
+    
+    // Implementation of interface method
+    @Override
+    public String getCategory() {
+        return "Non-Ball Sport";
     }
 }
