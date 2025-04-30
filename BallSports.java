@@ -24,13 +24,11 @@ public class BallSports extends Sports {
         this.isTeamSport = isTeamSport;
     }
     
-    // Polymorphism: Override rules
     @Override
     public void displayRules() {
         System.out.println("Rule: " + ballType + " ball. Team sport? " + (isTeamSport ? "Yes" : "No"));
     }
     
-    // Implementation of interface method
     @Override
     public String getCategory() {
         return "Ball Sport";
