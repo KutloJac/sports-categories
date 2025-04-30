@@ -24,13 +24,11 @@ public class NonBallSports extends Sports {
         this.venueType = venueType;
     }
     
-    //Polymorphism: Override rules
     @Override
     public void displayRules() {
         System.out.println("Rule: Use " + equipment + ". Venue: " + venueType);
     }
     
-    // Implementation of interface method
     @Override
     public String getCategory() {
         return "Non-Ball Sport";
