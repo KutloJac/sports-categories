@@ -38,10 +38,8 @@ public abstract class Sports implements SportsInterface {
         this.isPopularInBotswana = isPopularInBotswana;
     }
 
-    // Abstract method for polymorphism
     public abstract void displayRules();
     
-    // Implementation of interface method
     @Override
     public void displayInfo() {
         System.out.println("Name: " + name);
