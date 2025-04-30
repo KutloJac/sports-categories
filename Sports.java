@@ -10,7 +10,6 @@ public abstract class Sports implements SportsInterface {
         this.isPopularInBotswana = isPopularInBotswana;
     } 
     
-    // Basic getters and setters
     public String getName() {
         return name;
     }
