@@ -1,9 +1,9 @@
-public abstract class Sportss {
+public abstract class Sports implements SportsInterface {
     private String name;
     private int playerCount;
     private boolean isPopularInBotswana;
 
-    public Sportss(String name, int playerCount, boolean isPopularInBotswana) throws InvalidPlayerCountException {
+    public Sports(String name, int playerCount, boolean isPopularInBotswana) throws InvalidPlayerCountException {
         if(playerCount <= 0) throw new InvalidPlayerCountException("Invalid players for "+ name);
         this.name = name;
         this.playerCount = playerCount;
@@ -30,14 +30,23 @@ public abstract class Sportss {
         this.playerCount = playerCount;
     }
     
-    public boolean getIsPopularInBotswana() {  // Fixed method name for consistency
+    public boolean isPopularInBotswana() {
         return isPopularInBotswana;
     }
     
-    public void setIsPopularInBotswana(boolean isPopularInBotswana) {
+    public void setPopularInBotswana(boolean isPopularInBotswana) {
         this.isPopularInBotswana = isPopularInBotswana;
     }
 
     // Abstract method for polymorphism
     public abstract void displayRules();
+    
+    // Implementation of interface method
+    @Override
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Player Count: " + playerCount);
+        System.out.println("Popular in Botswana: " + (isPopularInBotswana ? "Yes" : "No"));
+        displayRules();
+    }
 }
